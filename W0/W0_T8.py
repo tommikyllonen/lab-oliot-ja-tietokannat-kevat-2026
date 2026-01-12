@@ -1,7 +1,7 @@
 from math import pi
 from math import tau
 
-def main():
+def main() -> None:
     if pi == tau:
         print("Tau equals Pi.")
     else:
@@ -11,6 +11,7 @@ def main():
         print("Tau equals 2 * Pi.")
     else:
         print("Tau doesn't equal 2 * Pi.")
+    return None
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,3 @@
-def fullname(firstName:str, lastName:str):
-    fullName = f"{firstName} {lastName}"
+def fullname(firstName:str, lastName:str) -> str:
+    fullName: str = f"{firstName} {lastName}"
     return fullName
