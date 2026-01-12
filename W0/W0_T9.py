@@ -4,9 +4,9 @@ def main():
     try:
         with open(filename, 'r') as file:
             content = file.read()
-        print(f"### {filename} content ####")
+        print(f"#### {filename} content ####")
         print(content)
-        print(f"\n### {filename} content ####")
+        print(f"#### {filename} content ####")
     except FileNotFoundError:
         print(f"File '{filename}' not found.")
 

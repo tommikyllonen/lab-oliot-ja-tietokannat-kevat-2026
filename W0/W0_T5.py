@@ -1,12 +1,13 @@
 def main():
-    value = 0
+    value = 0.0
     currentValue = 0.0
-    while(value != ""):
-        print(f"current Value {currentValue}")
+    while True:
+        print(f"Current value {currentValue}")
         value = input("Add number(empty stops): ")
-        if value.isnumeric():
-            currentValue += int(value)
-    
+        if value == "":
+            break
+        currentValue += float(value)
     print(f"Final value {currentValue}")
+
 if __name__ == "__main__":
     main()

@@ -1,8 +1,9 @@
 def main():
-    value = input("Insert number: ")
-    if value.isnumeric():
+    try:
+        value = float(input("Insert number: "))
         print(f"Inserted value is '{float(value)}'")
-    else:
+
+    except ValueError:
         print("Oops! That wasn't valid number.")
     
 if __name__ == "__main__":
