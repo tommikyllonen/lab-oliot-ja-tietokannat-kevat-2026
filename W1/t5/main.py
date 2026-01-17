@@ -2,35 +2,33 @@ from coin_acceptor import CointAcceptor
 
 
 def main() -> None:
-    selection = -1
+    selection: int = 0
     print("Program starting.")
+    print("Welcome to coin acceptor program.")
+    print("Insert new coin by typing it's value (0 returns the money, -1 exits the program)")
+    print("")
+
     coinAcceptor = CointAcceptor()
     
-    while(selection != 0):
+    while(selection != -1):
+        
         selection = printMenu()
-        match selection:
-            case 1:
-                coinAcceptor.insertCoin()
-            case 2:
-                print(f"Currently '{coinAcceptor.getAmount()}' coins in coin acceptor")
-            case 3:
-                print(f"Coin acceptor returned '{coinAcceptor.returnCoins()}' coins.")
-            case 0:
-                print("Program ending.")
-                return None
+        if (selection == -1):
+            print("Exiting program.")
+            break
+        elif (selection == 0):
+            coinAcceptor.returnCoins()
+        else:
+            coinAcceptor.insertCoin(selection)
+    print("\nProgram ending.")
     return None
 
 
-def printMenu() -> int:
-    print("1 - Insert coin")
-    print("2 - Show coins")
-    print("3 - Return coins")
-    print("0 - Exit program")
+def printMenu() -> float:
     try:
-        selection: int = int(input("Your choice: "))
+        selection: float = float(input("Insert coin(0 return, -1 exit): "))
     except ValueError:
        print("Invalid input, please enter a number.") 
-    print("") 
     return selection
 
 
