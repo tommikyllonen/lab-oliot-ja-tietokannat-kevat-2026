@@ -1,27 +1,26 @@
 from coin_acceptor import CointAcceptor
 
 
-def main() -> None:
-    selection: int = 0
-    print("Program starting.")
-    print("Welcome to coin acceptor program.")
-    print("Insert new coin by typing it's value (0 returns the money, -1 exits the program)")
-    print("")
-
-    coinAcceptor = CointAcceptor()
-    
-    while(selection != -1):
+class Main:
+    def __init__(self) -> None:    
+        selection: int = 0
+        print("Program starting.")
+        print("Welcome to coin acceptor program.")
+        print("Insert new coin by typing it's value (0 returns the money, -1 exits the program)")
+        print("")
+        coinAcceptor = CointAcceptor()
         
-        selection = printMenu()
-        if (selection == -1):
-            print("Exiting program.")
-            break
-        elif (selection == 0):
-            coinAcceptor.returnCoins()
-        else:
-            coinAcceptor.insertCoin(selection)
-    print("\nProgram ending.")
-    return None
+        while(selection != -1):
+            selection = printMenu()
+            if (selection == -1):
+                print("Exiting program.")
+                break
+            elif (selection == 0):
+                coinAcceptor.returnCoins()
+            else:
+                coinAcceptor.insertCoin(selection)
+        print("\nProgram ending.")
+        return None
 
 
 def printMenu() -> float:
@@ -34,6 +33,4 @@ def printMenu() -> float:
 
 
 if __name__ == "__main__":
-    main()
-    
-
+    Main()
