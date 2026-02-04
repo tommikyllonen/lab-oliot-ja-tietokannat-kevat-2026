@@ -1,13 +1,23 @@
+from datetime import datetime
+
 class Date:
+    # constructor
     def __init__(self, year: int,month: int, day: int ) -> None: 
-        self._day = day
-        self._month = month
-        self._year = year
+        #here in the constructor we:
+        # 1. try to set the date
+        if not self.setDate(year, month, day):
+            # 2. if the date is invalid, we set it to a default date
+            self._year = 1982
+            self._month = 6
+            self._day = 17
 
     # __str__ prints if you try to print the object, is similar to toString() methon in Java
     # which is called when you try to print the object
     def __str__(self) -> str:
-        return f"{self.day:02d}-{self.month:02d}-{self.year}"
+        # return datetime.timestamp(datetime(self._year, self._month, self._day)).strftime("%d-%m-%Y")
+        dt = datetime(self._year, self._month, self._day)
+        return dt.strftime("%x")# US format MM/DD/YYYY
+
 
     # Getters to access attributes day, month, year
     @property
@@ -20,7 +30,7 @@ class Date:
     def year(self) -> int:
         return self._year
     
-    # create setters to modify the attributes day, month, year
+    # create setters to modify the attributes day, month, year WITH VALIDATION
     @day.setter
     def day(self, value: int) -> None:
         if value < 1 or value > 31:
@@ -34,11 +44,12 @@ class Date:
     @year.setter
     def year(self, value: int) -> None:
         self._year = value
+
     def is_leap_year(self, year: int) -> bool:
         """Check if the year is a leap year."""
-        # method 1 less readable
+        # method 1 less readable:
         # return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
-        # method 2 more readable
+        # method 2 more readable:
         if year % 400 == 0:
             return True
         if year % 100 == 0:
@@ -46,6 +57,7 @@ class Date:
         if year % 4 == 0:
             return True
         return False
+        
     def setDate(self, year: int, month: int, day: int) -> bool:
         # days_in_month = [31, 28 + int(self.is_leap_year(year)), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] # Boolean to int give 0 or 1
         days_in_month: list[int] = [31, 29 if self.is_leap_year(year) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
