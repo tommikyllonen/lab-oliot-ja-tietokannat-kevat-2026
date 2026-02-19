@@ -1,0 +1,1 @@
+DELETE FROM device WHERE ID = '1';
