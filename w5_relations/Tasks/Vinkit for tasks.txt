@@ -1,0 +1,74 @@
+t1:
+- artist ja album -taulujen create lauseet palautetaan
+- jos pakollinen --> NOT NULL
+- syötetään tai importataan t1_album.csv ja t1_artist.csv tiedot
+    (löytyvät moodlesta kohdasta "datasets", 
+    tarvitaan t2 ja t3 tehtäviä varten)
+- HUOM: kannattaa tehdä ne taulut ennen csv-importteja, koska 
+csv-import ei voi tietää mitkä sarakkeet ovat primary key, not null, jne!!!
+
+t2:
+- liitoskysely
+- sarakkeiden nimeämiset (AS)
+- ORDER BY ensisijaisesti artistin nimi, toissijaisesti albumin nimi
+- SELECT ... FROM artist JOIN album ON ... ORDER BY ..., ... ASC;
+
+t3:
+- tehtävänannossa virhe! pyydetään (muka) Z -> A vaikka todellisuudessa 
+pitää olla A -> Z !!!
+- SELECT artistin nimi, trackien summa AS ...
+FROM ...
+JOIN ... ON id:t mätchää
+GROUP BY artistin nimi
+ORDER BY artistin nimi
+
+t4:
+- product ja receipt -taulut ja näihin liittyvä suhdetaulu product_receipt
+- product taulun luonti "helppo" mutta 
+    HUOM: product.price_per_kilo tyyppiä NUMERIC
+- receipt -taulun luonnissa muistettava se creted_at sarakkeen 
+    määreet DATETIME DEFAULT CURRENT_TIMESTAMP
+- product_receipt -suhdetaulun foreign key määrittelyt molempien id:den suhteen
+- palautetaan create lauseet
+
+t5:
+- käyttää t4 tauluja
+- SELECT ...(huom sarakkeiden nimi-aliakset) FROM ...(eka taulu)
+    JOIN ...(toka taulu)
+    ON ...(ehto id:den mukaan)
+    JOIN ...(kolmas taulu)
+    ON ...(ehto id:den mukaan)
+    WHERE ...(se Vincent)
+    ORDER BY ...(se päiväys) DESC;
+- palautetaan yo. kysely
+
+t6:
+- itseensä viittaava taulu
+- ketkä raportoi Employee -taulun mukaan Nancy Edwadsille
+    --> tarvitaan select alikysely, jota käytetään 
+    pääkyselyn ehdossa
+- SELECT ...
+    FROM Employee
+    WHERE ... = (SELECT ... FROM Employee WHERE ...)
+    ORDER BY ..., ...
+
+t7:
+- kyselyn tuloksessa ei saa esiintyä sellaisia marjoja
+    tai hedelmiä joissa vitamin -maininta JOLLAIN rivillä
+    on 'Folate (folic acid)'
+- WITH RECURSIVE FilteredFruit AS (
+    SELECT ...
+    FROM ...
+    WHERE
+        ... NOT IN (
+            SELECT ...
+            FROM ...
+            WHERE se_kielletty_string
+        )
+    UNION
+    SELECT ...
+    FROM fruit f
+    JOIN FilteredFruit ff ON f.name == ff.name
+    WHERE ... != se_kielletty_string
+)
+SELECT ... from FilteredFruit;
