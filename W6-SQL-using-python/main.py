@@ -60,8 +60,6 @@ class Main:
         else:
             print("Owner not added!")
         return None
-        TÄSSÄ OLLAAN VIDEO JÄI KOHTAAN: 2:49:23
-#     # https://youtu.be/wcTSyNim8Wg?si=VRYQg0wLQLtOL_hJ
         
 
     def main_menu(self) -> None:
