@@ -51,7 +51,6 @@ class Main:
             except ValueError:
                 print("invalid input!")
 
-        
 
     def main_menu(self) -> None:
         while True:
@@ -197,6 +196,20 @@ class Main:
                     print(f"id: {id} {owner} {created_at}")
         else:
             print("Error listing owners!")
+    148:56: kohdassa ollaan.
+    def remove_owner(self) -> None:
+        self.list_owners()
+        owner_id: int = self.intInput("Owner id to delete", 1)
+        sql: str = "DELETE FROM owner WHERE id=?"
+        cursor: Cursor | None = self.db.execute(sql, (id,))
+        if cursor:
+            if cursor.rowcount > 0:
+                print(f"Owner '{id}' deleted")
+            else:
+                print(f"Owner '{id}' not found!")
+        else:
+            print("Error in deleting owner!")
+        return None
 
     def list_cars(self) -> None:
         sql: str = "SELECT * FROM car"

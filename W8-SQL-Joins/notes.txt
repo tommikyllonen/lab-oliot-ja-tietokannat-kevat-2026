@@ -1,0 +1,58 @@
+sqlite> select * from Tilaus;
++-----------+------------+-------+------------+
+| tilaus_id | asiakas_id | summa |    pvm     |
++-----------+------------+-------+------------+
+| 100       | 1          | 120   | 2025-03-10 |
+| 101       | 1          | 80    | 2025-04-02 |
+| 102       | 2          | 50    | 2025-04-05 |
+| 103       | 99         | 5     | 2025-04-08 |
++-----------+------------+-------+------------+
+sqlite> select * from Asiakas;
++------------+------+----------+
+| asiakas_id | nimi | kaupunki |
++------------+------+----------+
+| 1          | Ala  | Lahti    |
+| 2          | Bela | Helsinki |
+| 3          | Caro | Tampere  |
+| 4          | Dino | Lahti    |
++------------+------+----------+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  INNER JOIN (matching rows, can be writen JOIN or INNER JOIN)
+sqlite> SELECT a.asiakas_id, a.nimi, t.tilaus_id, t.summa
+FROM Asiakas a
+JOIN Tilaus t
+ ON a.asiakas_id = t.asiakas_id;
++------------+------+-----------+-------+
+| asiakas_id | nimi | tilaus_id | summa |
++------------+------+-----------+-------+
+| 1          | Ala  | 100       | 120   |
+| 1          | Ala  | 101       | 80    |
+| 2          | Bela | 102       | 50    |
++------------+------+-----------+-------+
+
+
+sqlite> SELECT a.asiakas_id, a.nimi, t.tilaus_id, t.summa
+FROM Asiakas a
+RIGHT JOIN Tilaus t
+ ON a.asiakas_id = t.asiakas_id;
++------------+------+-----------+-------+
+| asiakas_id | nimi | tilaus_id | summa |
++------------+------+-----------+-------+
+| 1          | Ala  | 100       | 120   |
+| 1          | Ala  | 101       | 80    |
+| 2          | Bela | 102       | 50    |
+|            |      | 103       | 5     |
++------------+------+-----------+-------+
+sqlite> SELECT a.asiakas_id, a.nimi, t.tilaus_id, t.summa
+FROM Asiakas a
+LEFT JOIN Tilaus t
+ ON a.asiakas_id = t.asiakas_id;
++------------+------+-----------+-------+
+| asiakas_id | nimi | tilaus_id | summa |
++------------+------+-----------+-------+
+| 1          | Ala  | 100       | 120   |
+| 1          | Ala  | 101       | 80    |
+| 2          | Bela | 102       | 50    |
+| 3          | Caro |           |       |
+| 4          | Dino |           |       |
++------------+------+-----------+-------+
