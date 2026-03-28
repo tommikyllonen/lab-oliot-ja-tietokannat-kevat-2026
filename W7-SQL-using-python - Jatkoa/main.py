@@ -64,6 +64,7 @@ class Main:
             print("7. List Cars")
             print("8. Add Car")
             print("9. Remove Car")
+            print("10. Add owner to car")
             print("x. Exit")
             choice = input("Enter choice: ").lower()
             match choice:
@@ -73,12 +74,13 @@ class Main:
                 case "2":
                     self.add_owner()
                 case "3":
-                    print("remove owner...")
+                    self.remove_owner()
                 case "4":
                     self.list_engines()
                 case "5":
                     self.add_engine()
                 case "6":
+                    self.remove_engine()
                     print("remove engine...")
                 case "7":
                     self.list_cars()
@@ -86,6 +88,8 @@ class Main:
                     self.add_car()
                 case "9":
                     self.delete_car()
+                case "10":
+                    self.add_owner_to_car()
                 case "x":
                     print("Goodbye")
                     break
@@ -102,7 +106,6 @@ class Main:
         return False
     
     def add_car(self) -> None:
-
         print ("Existing engines:")
         self.list_engines()
         engine_id: int = self.intInput("Existing engine ID", 1)
@@ -168,6 +171,30 @@ class Main:
             print("Error listing engines!")
         return None
 
+    def remove_engine(self) -> None:
+        self.list_engines()
+        engine_id: int = self.intInput("Engine id to delete", 1)
+        if not self.check_id_in_table("engine", engine_id):
+            print(f"Engine id '{engine_id}' not found!")
+            return None
+        sql: str = "SELECT id FROM car WHERE engine_id=?"
+        cursor: Cursor | None = self.db.execute(sql, (engine_id,))
+        if cursor:
+            rows = cursor.fetchall()
+            row_count = len(rows)
+            if row_count > 0:
+                print(f"Engine id '{engine_id}' is in use by {row_count} cars. Cannot remove!")
+                return None
+        else:
+            print("Error during engine removal!")
+        sql: str = "DELETE FROM engine WHERE id=?"
+        cursor: Cursor | None = self.db.execute(sql, (engine_id,))
+        if cursor:
+            print(f"Engine id '{engine_id}' removed. ")
+        else:
+            print(f"Error removing engine!" )
+        return None
+
     def add_owner(self) -> None:
         fname: str = self.strInput("Owner fname", "Keijo")
         lname: str = self.strInput("Owner lname", "Rosberg")
@@ -196,36 +223,80 @@ class Main:
                     print(f"id: {id} {owner} {created_at}")
         else:
             print("Error listing owners!")
-    148:56: kohdassa ollaan.
+
     def remove_owner(self) -> None:
         self.list_owners()
         owner_id: int = self.intInput("Owner id to delete", 1)
-        sql: str = "DELETE FROM owner WHERE id=?"
-        cursor: Cursor | None = self.db.execute(sql, (id,))
+
+        if not self.check_id_in_table("owner", owner_id):
+            print(f"owner id '{owner_id}' not found!")
+            return None
+        self.remove_owner_from_cars(owner_id)
+        sql:str = "DELETE FROM owner WHERE id = ?"
+        cursor: Cursor = self.db.execute(sql, (owner_id,))
         if cursor:
-            if cursor.rowcount > 0:
-                print(f"Owner '{id}' deleted")
-            else:
-                print(f"Owner '{id}' not found!")
+            print(f"owner removed from")
         else:
-            print("Error in deleting owner!")
+            print("Error removing owner!")
+
+
+    def remove_owner_from_cars(self, owner_id:int) -> None:
+        sql:str = "UPDATE car SET owner_id = NULL WHERE owner_id = ?"
+        cursor: Cursor = self.db.execute(sql, (owner_id,))
+        if cursor:
+            print(f"owner removed from all '{cursor.rowcount}' cars")
+        else:
+            print("Error removing owner from cars!")
+
+
+
         return None
 
     def list_cars(self) -> None:
-        sql: str = "SELECT * FROM car"
+        # version1
+        # sql: str = "SELECT * FROM car"
+        # cursor: Cursor = self.db.execute(sql, ())
+        # if cursor:
+        #     rows = cursor.fetchall()
+        #     if len(rows) == 0:
+        #         print("No cars found!")
+        #     else:
+        #         for row in rows:
+        #             id, brand, model, year, color, engine_id, owner_id = row
+        #             car: Car = Car(brand, model, year, color, engine_id)
+        #             print(f"Car: '{car}' cid {id} engine_id: {engine_id} oid: {owner_id}")
+        # else:
+        #     print("Error listing cars!")
+        # return None
+
+
+        # version2 with JOIN
+        sql: str = """SELECT * FROM car c
+                    JOIN engine e ON c.engine_id = e.id
+                    LEFT JOIN owner o ON c.owner_id = o.id
+                    """
         cursor: Cursor = self.db.execute(sql, ())
         if cursor:
             rows = cursor.fetchall()
             if len(rows) == 0:
                 print("No cars found!")
-            else:
+                
+            else: 
                 for row in rows:
-                    id, brand, model, year, color, engine_id, owner_id = row
+                    (car_id, brand, model, year, color, engine_fk_id, c_owner_id, engine_id, fuel, cc, hp,
+                    owner_id, fname, lname, email, created_at) = row
                     car: Car = Car(brand, model, year, color, engine_id)
-                    print(f"Car: '{car}' cid {id} engine_id: {engine_id} oid: {owner_id}")
+                    engine: Engine = Engine(fuel, cc, hp)
+                    owner: Owner = Owner(fname, lname, email) 
+                    print(f"Car [{car_id}]{car}] Engine [{engine_id}{engine}] Owner [{owner_id if owner_id else '-'} {owner if owner_id else '-'}]")
         else:
-            print("Error listing cars!")
+            print("Error listing cars!")      
+
         return None
+
+
+
+
     def add_owner_to_car(self) -> None:
         #todo list cars 
         car_id: int = self.intInput("Car id", 1)
