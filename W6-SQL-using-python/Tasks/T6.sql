@@ -1,0 +1,1 @@
+SELECT DISTINCT fruit, "value" AS "amount" FROM Fruits WHERE "value" > 5000 ORDER BY fruit ASC;
