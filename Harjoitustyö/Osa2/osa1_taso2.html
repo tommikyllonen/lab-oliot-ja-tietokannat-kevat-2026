@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>osa1_taso2</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 0mm;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>a.sourceLine { display: inline-block; line-height: 1.25; }a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }a.sourceLine:empty { height: 1.2em; }.sourceCode { overflow: visible; }code.sourceCode { white-space: pre; position: relative; }div.sourceCode { margin: 1em 0; }pre.sourceCode { margin: 0; }@media screen {div.sourceCode { overflow: auto; }}@media print {code.sourceCode { white-space: pre-wrap; }a.sourceLine { text-indent: -1em; padding-left: 1em; }}pre.numberSource a.sourceLine{ position: relative; left: -4em; }pre.numberSource a.sourceLine::before{ content: attr(title);position: relative; left: -1em; text-align: right; vertical-align: baseline;border: none; pointer-events: all; display: inline-block;-webkit-touch-callout: none; -webkit-user-select: none;-khtml-user-select: none; -moz-user-select: none;-ms-user-select: none; user-select: none;padding: 0 4px; width: 4em;color: #aaaaaa;}pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }div.sourceCode{ background-color: #f8f8f8; }@media screen {a.sourceLine::before { text-decoration: underline; }}code span.al { color: #ef2929; }code span.an { color: #8f5902; font-weight: bold; font-style: italic; }code span.at { color: #c4a000; }code span.bn { color: #0000cf; }code span.cf { color: #204a87; font-weight: bold; }code span.ch { color: #4e9a06; }code span.cn { color: #000000; }code span.co { color: #8f5902; font-style: italic; }code span.cv { color: #8f5902; font-weight: bold; font-style: italic; }code span.do { color: #8f5902; font-weight: bold; font-style: italic; }code span.dt { color: #204a87; }code span.dv { color: #0000cf; }code span.er { color: #a40000; font-weight: bold; }code span.ex { }code span.fl { color: #0000cf; }code span.fu { color: #000000; }code span.im { }code span.in { color: #8f5902; font-weight: bold; font-style: italic; }code span.kw { color: #204a87; font-weight: bold; }code span.op { color: #ce5c00; font-weight: bold; }code span.ot { color: #8f5902; }code span.pp { color: #8f5902; font-style: italic; }code span.sc { color: #000000; }code span.ss { color: #4e9a06; }code span.st { color: #4e9a06; }code span.va { color: #000000; }code span.vs { color: #4e9a06; }code span.wa { color: #8f5902; font-weight: bold; font-style: italic; }code {background-color: #eee;}pre code {color: #f1f1f1;background-color:#1f1f1f;}pre {padding: 4px 8px;color: #f1f1f1;background-color: #1f1f1f;}.sourceCode.py {background-color: #1f1f1f;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="harjoitustyö---osa-1-taso-2">Harjoitustyö - Osa 1 Taso 2</h1>
+<p>Kopioi edellisen tason tuotokset uuteen kansioon ja jatka ohjeiden mukaisesti, jotta edellisen tason tuotokset jäävät talteen sellaisinaan. Saatat tarvita niitä myöhemmin. Tasolla yksi tuotetut tiedostot olivat:</p>
+<ul>
+<li><strong><code>main.py</code></strong></li>
+<li><strong><code>menu_note.py</code></strong></li>
+<li><strong><code>db_conn.py</code></strong></li>
+<li><strong><code>setup.sql</code></strong></li>
+<li><strong><code>test.sql</code></strong></li>
+</ul>
+<h2 id="vaihe-1---virtuaaliympäristö-ja-kirje-kirjaston-asennus">Vaihe 1 - Virtuaaliympäristö ja <code>kirje</code> kirjaston asennus</h2>
+<p>Aloita tutustumalla <a href="https://pypi.org/project/kirje/">kirje</a> nimiseen kirjastoon. Ota kirjaston sivustolta talteen kirjaston tämän hetkinen versionumero, asennuskomento, sekä ohjelmakoodi esimerkki. Taltioi ohjelmakoodi esimerkki “<code>test_kirje.py</code>” nimiseen tiedostoon. Avaa kyseinen projektikansio(level) suoraan VSCode:ssa, niin että se ei ole alihakemistossa. Tällä on vaikutuksia VSCode:n virtuaaliympäristön tunnistukseen.</p>
+<p>Aktivoi virtuaalinen kehitysympäristö(<code>venv</code>), jotta kirjasto asentuu projektikohtaisesti. Virtuaaliympäristön käyttöönotto vaiheet:</p>
+<ol type="1">
+<li>Luo virtuaaliympäristö “<code>python -m venv .venv</code>”</li>
+<li>Aktivoi virtuaaliympäristö “<code>source .venv/&lt;os_path&gt;/activate</code>”
+<ol type="1">
+<li>Windows <code>&lt;os_path&gt;</code>: <code>Scripts</code></li>
+<li>Linux &amp; MacOS <code>&lt;os_path&gt;</code>: <code>bin</code></li>
+</ol></li>
+<li>Tarkista, että “<code>(.venv)</code>” etuliite ilmestyy komentotulkkiin. Tämä kertoo, että virtuaaliympäristö on aktiivinen. Jokaisen ohjelmointikerran alussa tulee muistaa aktivoida virtuaaliympäristö vaiheen 2 mukaisesti.</li>
+</ol>
+<p>Seuraavaksi asenna kirjasto virtuaaliympäristöön komennolla “<code>pip install &lt;kirjaston_nimi&gt;</code>”. Asennuksen jälkeen tarkista asennetun paketin versio. Asennettujen kirjastojen versionumerot voi tulostaa komennolla “<code>pip freeze</code>”. Kirjaston asennus on onnistunut kun kirje paketti näkyy tulosteessa versiolla “<code>0.2.0</code> tai suurempi(mahdolliset kirjastopäivitykset).</p>
+<p>Aja asennettujen kirjastojen tulostuskomento vielä uudelleen, mutta tällä kertaa ohjaa komennon tuloste tiedostoon “<code>requirements.txt</code>”. Komennon muodostaman tulosteen voi ohjata tiedostoon suuremmuusmerkillä “<code>&gt;</code>”.</p>
+<p>Komento: <code>pip freeze &gt; requirements.txt</code></p>
+<p><strong>requirements.txt</strong></p>
+<pre><code>kirje==0.2.0</code></pre>
+<h2 id="vaihe-2---kirje-kirjaston-hyödyntäminen">Vaihe 2 - Kirje kirjaston hyödyntäminen</h2>
+<p>Harjoitustyössä tiettyihin tulosteisiin on tarkoitus lisätä koriste reunuksia. Harjoitustyön tekoon suositeltu “<code>kirje</code>” kirjasto on testattu yhteensopivaksi määritelmien kanssa ja on näin ollen varteenotettavin kirjasto tähän työhön. Kirjaston käyttöönotto vaatii tutustumista, johon aiemmin luotu “<code>test_kirje.py</code>” on sopiva. Aja tiedosto Python-tulkilla sellaisenaan.</p>
+<p><code>python test_kirje.py</code></p>
+<p><strong>Testiohjelman tuloste:</strong></p>
+<pre><code>╭──────────Hello world──────────╮
+│ ID: 2                         │
+│ Created: 2023-10-27 14:18:14  │
+│ Modified: 2023-10-27 14:18:25 │
+├───────────────────────────────┤
+│ Hello                         │
+│ world.                        │
+╰───────────────────────────────╯</code></pre>
+<p>Muistioiden listaukseen tulee käyttää “<code>streamlined</code>”-tyyliä ja yksittäisen muistion tarkasteluun “<code>default</code>” tyyliä. Myöhemmin harjoitustyössä otsakkeiden avain-arvo -parit kuten “<code>ID</code>” tullaan erottelemaan tavuviivalla esim. <code>ID -&nbsp;Title</code>. Tätä varten voi käyttää “<code>KirjeDetails</code>”-luokan muodostimessa olevaa “<code>header_separation</code>”-parametriä.</p>
+<p><strong>Esimerkki ohjelmakoodi:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb3-1"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> kirje <span class="im">import</span> Kirje, KirjeDetails</span>
+<span id="cb3-2"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Show mock list of messages in streamlined style:"</span>)</span>
+<span id="cb3-4"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-4" aria-hidden="true" tabindex="-1"></a>mock_list_details <span class="op">=</span> KirjeDetails(</span>
+<span id="cb3-5"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-5" aria-hidden="true" tabindex="-1"></a>    content<span class="op">=</span><span class="st">"1 - example</span><span class="ch">\n</span><span class="st">2 - tomorrow"</span>,</span>
+<span id="cb3-6"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-6" aria-hidden="true" tabindex="-1"></a>    header_separation<span class="op">=</span><span class="st">" - "</span>,</span>
+<span id="cb3-7"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-7" aria-hidden="true" tabindex="-1"></a>    headers<span class="op">=</span>{</span>
+<span id="cb3-8"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'ID'</span>: <span class="st">'Title'</span>,</span>
+<span id="cb3-9"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Title'</span>: <span class="st">' notes '</span></span>
+<span id="cb3-10"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-11"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-12"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-12" aria-hidden="true" tabindex="-1"></a>mock_list <span class="op">=</span> Kirje(mock_list_details)</span>
+<span id="cb3-13"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb3-13" aria-hidden="true" tabindex="-1"></a>mock_list.display(<span class="st">"streamlined"</span>)</span></code></pre></div>
+<p>Lisää “<code>test_kirje.py</code>” tiedostoon vielä alla olevan esimerkin mukaisesti keinotekoinen muistio oletus tyylillä. Toimintalogiikkaan voi hyödyntää yllä olevaa esimerkkiä.</p>
+<p>Koska kyseessä on testiohjelma, niin oleellisinta on, että toivottu tuloste tulee näkyville. Voit tässä tapauksessa kirjoittaa ohjelmakoodin päätasolle piittaamatta annetuista tyyliohjeista.</p>
+<p><strong>test_kirje.py ohjelman ajo:</strong></p>
+<pre><code>Show mock list of messages in streamlined style:
++===== notes =====+
+| ID - Title      |
++-----------------+
+| 1 - example     |
+| 2 - tomorrow    |
++=================+
+
+Show mock note in default style:
++-----tomorrow-----+
+| ID - 2           |
++------------------+
+| eat              |
+| study            |
+| sleep            |
++------------------+</code></pre>
+<p>Huomioi, että muistiolistauksessa sanan “<code> notes </code>” ympärillä on oltava välilyönnit.</p>
+<h2 id="vaihe-3---tietokannan-alustus">Vaihe 3 - Tietokannan alustus</h2>
+<p>Luo tietokantayhteys tiedostoon “<code>db_conn.py</code>” luokka nimeltä “<code>DB</code>”. Luo tälle kaksi staattista metodia.</p>
+<ul>
+<li><code class="sourceCode python">loadSqlScript(filepath: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</code>
+<ul>
+<li>jolla <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files">luetaan</a> “<code>.sql</code>”-päätteinen tiedosto ja palautetaan sisältö merkkijonomuodossa.</li>
+</ul></li>
+<li><code class="sourceCode python">initializeDB() <span class="op">-&gt;</span> <span class="va">None</span>:</code>
+<ul>
+<li>jota kutsumalla tietokanta alustuu.</li>
+</ul></li>
+</ul>
+<p>Alla kuvattuna tarkemmin staattisten metodien toimintaperiaatteita.</p>
+<p><strong>“<code class="sourceCode python">loadSqlScript</code>” staattisen metodin toiminta:</strong></p>
+<ol type="1">
+<li>Ota vastaan tiedostopolku parametri ja määritä paluuarvoksi merkkijono.</li>
+<li>Alusta sisältö muuttuja tyhjällä merkkijonolla, esim. <code class="sourceCode python">content <span class="op">=</span> <span class="st">""</span></code></li>
+<li>Kokeile (avaa poikkeustenkäsittely)
+<ol type="1">
+<li>Avaa tiedosto käyttäen <a href="https://docs.python.org/3/library/functions.html#open">“<code class="sourceCode python"><span class="bu">open</span>()</code>”-funktiota</a> ja merkitse lukemismoodi ‘<code>r</code>’ ja merkistö “<code>UTF-8</code>”</li>
+<li>Täytä sisältö muuttuja esim. kutsumalla tiedostokahvan “<code class="sourceCode python">read()</code>”-metodia.</li>
+<li>Sulje tiedostokahva</li>
+</ol></li>
+<li>Käsittele poikkeus
+<ol type="1">
+<li>Ilmoita käyttäjälle: “<code class="sourceCode tcl">Failed to <span class="kw">read</span> '<span class="kw">{</span>filepath<span class="kw">}</span>' <span class="kw">file</span>.</code>”.</li>
+<li>Pysäytä ohjelma “<code>sys.exit(-1)</code>”.</li>
+</ol></li>
+<li>Palauta sisältö kutsujalle “<code>return</code>”-komennolla</li>
+</ol>
+<p>Toinen staattinen metodi alustaa tietokannan. Metodi alkaa “<code>setup.sql</code>” tiedoston lukemisella, johon kannattaa hyödyntää aiemmin luotua metodia. Tietokantaan kirjoittamista varten on myös haettava tietokantayhteydestä kursori. Kursorista tulisi löytyä jäsenfunktio “<code>executescript</code>” johon voi syöttää parametrinä “<code>setup.sql</code>” tiedostosta luetun sisällön.</p>
+<p><strong>“<code class="sourceCode python">initialize()</code>” staattisen metodin toiminta:</strong></p>
+<ol type="1">
+<li>Lue SQL-skripti tiedosto “<code>setup.sql</code>” muuttujaan “<code>script</code>” hyödyntämällä aiempaa metodia. Staattisen metodin kutsu alkaa luokan nimellä esim. “<code>DB.loadSqlScript(...)</code>”.</li>
+<li>Luo kursori tietokantayhteysoliosta</li>
+<li>Käytä kursorin “<code class="sourceCode python">executescript()</code>”-metodia ja välitä “<code>script</code>” parametrinä tälle.</li>
+<li>Varmista kirjoitus tietokantaan kutsumalla tietokantayhteysolion “<code class="sourceCode python">commit()</code>” metodia.</li>
+<li>Sulje kursori</li>
+</ol>
+<p>Kun “<code>DB</code>” luokka on määritelty, voidaan se tuoda pääohjelmaan “<strong><code>main.py</code></strong>” ja kutsua sen staattista tietokannan alustusmetodia.</p>
+<p><strong>Testaa toimivuus:</strong></p>
+<ol type="1">
+<li>Varmista, ettei projektin päätasolla ole “<code>notes.db</code>” tiedostoa</li>
+<li>Aja pääohjelma Pythonilla ja sulje se hallitusti.</li>
+<li>Tarkista, että “<code>notes.db</code>” ilmestyi projektikansioon ajon jälkeen.</li>
+<li>Tarkista, että tietokantaan ilmestyi taulu nimeltä “<code>note</code>” ja että sen sarakkeet vastaavat aiemmin määriteltyjä sarakkeita.</li>
+<li>Aja pääohjelma uudelleen, jotta nähdään, ettei alustuskomento aiheuta ongelmaa, jos tietokanta taulu on jo olemassa.</li>
+</ol>
+<h2 id="vaihe-4---muistio-tietojen-pääsyobjekti">Vaihe 4 - Muistio tietojen pääsyobjekti</h2>
+<p>Tietokannassa olevien muistioiden käsittelyyn voidaan luoda “<code>model_note.py</code>” ohjelmatiedosto niin, että siellä on yksi tietoluokka nimeltä “<code>Note</code>” ja toinen tietoluokka nimeltään “<code>NoteDAO</code>”. DAO(Data Access Object), eli tietojen pääsyobjekti konsepti on käsitelty seuraavalla tallenteella kohdassa <a href="https://www.youtube.com/watch?v=oMRND05QTKs&amp;t=3934s">P6 - Singleton and DAO</a>.</p>
+<p>Aloita luomalla tietoluokka “<code>Note</code>”, johon määrittelet tietoattribuutit ja niiden tietotyypit, kuten ne ovat määriteltyinä tietokanta taulussa “<code>note</code>”. Huomioi, että sarakkeiden järjestyksellä on myös merkitystä. Luokka johon ei tule muuta kuin tietoarvoja, voidaan käyttää <a href="https://docs.python.org/3/library/dataclasses.html">“<code>dataclass</code>”</a> dekoraattoria. Kyseisen dekoroinnin(koristelun) avulla luokasta voidaan muodostaa objekti/ilmentymä ilman erillistä alustusfunktio määrittelyä. Tietoluokka on esiintynyt kurssin aikana ensimmäisen kerran <a href="https://www.youtube.com/watch?v=nGDr_2sTfkQ&amp;t=1073s">luennolla 2</a>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb5-1"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="at">@dataclass</span></span>
+<span id="cb5-2"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Note:</span>
+<span id="cb5-3"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">id</span>: <span class="bu">int</span></span>
+<span id="cb5-4"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb5-4" aria-hidden="true" tabindex="-1"></a>    title: <span class="bu">str</span></span>
+<span id="cb5-5"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb5-5" aria-hidden="true" tabindex="-1"></a>    content: <span class="bu">str</span></span></code></pre></div>
+<h3 id="dao---kirjoitus">DAO - Kirjoitus</h3>
+<p>Muistio tietojen pääsyobjektin, eli “<code>NoteDAO</code>” luokan luonti voidaan aloittaa määrittelemällä <strong>staattinen</strong> muistion luonti metodi esim. “<code class="sourceCode python"><span class="kw">def</span> addNote(title: <span class="bu">str</span>, content: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</code>”. Staattiselle metodille tulee kyetä välittämään muistion luonnin kannalta oleelliset tiedot parametrein.</p>
+<p>Valmistele metodin sisälle kysely, jossa syötetään tietoa “<code>note</code>”-tauluun. Tietoa syöttävän kyselyn arvot tulee määrittää paikanpitäjä merkeillä “<code>?</code>”. Seuraavaksi valmistele <code>tuple</code>-tietorakenne, johon on taltioitu muistioon liittyvät tiedot samassa järjestyksessä, kuin missä ne on tarkoitus kyselyyn sijoittaa.</p>
+<p>Kyselytietojen ollessa valmiina, hae tietokantayhteys objektista kursori ja kutsu sen <a href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.execute">suoritusmetodia</a>, johon ensimmäisenä parametrinä tulee sijoittaa tietokantakysely ja toisena parametrinä kyselyyn liittyvät tiedot, eli aiemmin muodostettu <code>tuple</code>. Kirjoittamisen jälkeen tulee muistaa <a href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.commit">vahvistaa</a> tietokantatapahtuma tietokantayhteys objektin kautta, jonka jälkeen kursorin voi sulkea. Huom! tästä metodista ei tarvitse palauttaa mitään kutsujalle.</p>
+<p>Testaa tiedon syöttö luomalla “<code>test_model_note.py</code>” tiedosto, johon tuodaan “<code>model_note.py</code>” tiedostosta “<code>NoteDAO</code>”-luokka ja kutsutaan päätasolla muistion lisäys metodia. Staattista metodia voidaan kutsua luokan nimellä ja pistenotaation jälkeen metodiin viitaten. esim. “<code>NoteDAO.addNote('title_here','content_here')</code>”.</p>
+<p>Aja “<code>model_note.py</code>” Python tulkin avulla ja varmista, että tieto menee perille tietokantaan kyselemällä tietokannassa “<code>SELECT * FROM note;</code>” tai suoraan Bash tulkista “<code>echo -e ".mode table\nSELECT * FROM note;\n" | sqlite3 notes.db</code>”.</p>
+<p><strong>“note”-taulun sisältö:</strong></p>
+<pre><code>+----+-------------+---------+
+| id |    title    | content |
++----+-------------+---------+
+| 1  | first_note  | hello   |
+|    |             | world   |
++----+-------------+---------+
+| 2  | second_note | This    |
+|    |             | is      |
+|    |             | my      |
+|    |             | second  |
+|    |             | note.   |
++----+-------------+---------+</code></pre>
+<p>Aja testiohjelmatiedosto vielä toiseen kertaan, jotta näet miten ohjelma käyttäytyisi saman otsikkosyötteen kanssa (otsikko kenttään syötettävä tieto tulee olla uniikkia).</p>
+<pre><code>python test_model_note.py 
+Traceback (most recent call last):
+  File "/path/to/test_model_note.py", line 3, in &lt;module&gt;
+    NoteDAO.addNote("first_note", "hello\nworld")
+  File "/path/to/model_note.py", line 36, in addNote
+    cursor.execute(sql_statement, (title, content,))
+sqlite3.IntegrityError: UNIQUE constraint failed: note.title</code></pre>
+<p>Lisää vielä poikkeustenkäsittely, eli käytä “<code>try-except</code>” koodilohkoa tai toteuta virheenkorjaus muuten, jotta voit virheen sattuessa tulostaa “<code>Error while inserting note.</code>” ja jatkaa ohjelman suoritusta normaalisti.</p>
+<p><strong>Metodin sisältö tiivistettynä:</strong></p>
+<ol type="1">
+<li>Määritä parametrit otsikko ja sisältö</li>
+<li>Luo tietoa “<code>note</code>”-tauluun lisäävä SQL-lauseke</li>
+<li>Kokeile (Poikkeustenkäsittelylohko)
+<ol type="1">
+<li>Hae kursori tietokantayhteysoliosta</li>
+<li>Suorita tiedon syöttö tietokantaan.</li>
+<li>Vahvista kirjoitustoimenpide käyttämällä tietokantayhteysoliota</li>
+<li>Sulje kursori</li>
+</ol></li>
+<li>Käsittele mahdollinen poikkeus
+<ol type="1">
+<li>Tulosta virheilmoitus “<code>Error while inserting note.</code>”</li>
+</ol></li>
+</ol>
+<h3 id="dao---lukeminen">DAO - Lukeminen</h3>
+<p>Tietoja luettaessa tietokannasta DAO-konseptin yhteydessä on seuraavat vaiheet:</p>
+<ol type="1">
+<li>Tiedon haku tietokanta taulusta “<code>x</code>”</li>
+<li>Olioiden muodostus sopivan tietoluokan avulla</li>
+<li>Olion palautus kutsujalle.</li>
+</ol>
+<p>Määrittel “<code>NoteDAO</code>”-luokkaan uusi staattinen metodi “<code class="sourceCode python"><span class="kw">def</span> getNotes(limit: <span class="bu">int</span> <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>) <span class="op">-&gt;</span> <span class="bu">list</span>[Note]:</code>”. Metodissa tarkoitus on hakea tiedot tietokannan “<code>note</code>”-taulusta ja muodostaa <code>Note</code> olioita. Eli kyseessä on listan muodostus, jossa sen alkiot edustavat “<code>Note</code>”-luokan olioita =&gt; oliolista.</p>
+<p><strong>Metodi vaiheina:</strong></p>
+<ol type="1">
+<li>Alusta tyhjä oliolista, jonka tietotyyppi on “<code class="sourceCode python"><span class="bu">list</span>[Note]</code>”</li>
+<li>Hae <a href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.cursor">kursori tietokantayhteysoliosta</a></li>
+<li>Muodosta SQL-lauseke muistioiden hakua varten</li>
+<li><a href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.execute">Suorita</a> SQL-lauseke</li>
+<li><a href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.fetchall">Hae tietueet</a> “<code>records</code>”-nimiseen muuttujaan</li>
+<li>Sulje kursori</li>
+<li>Käy tietueita yksi kerrallaan läpi
+<ol type="1">
+<li>Muodosta “<code>Note</code>”-olio esim. “<code>note = Note(*record)</code>”, jossa tähti jyvittää tietueen alkiot “<code>Note</code>”-luokan muodostimelle. Muodostuksen voi toteuttaa myös indekseihin perustuen esim. “<code>note = Note(record[0], record[1], record[2])</code>”.</li>
+<li>Lisää muodostettu olio aiemmin muodostettuun oliolistaan sen “<code>append()</code>”-metodilla</li>
+</ol></li>
+<li>Palauta oliolista</li>
+</ol>
+<p>Kun metodi on määritelty, kutsu sitä “<code>test_model_note.py</code>” tiedoston lopussa ja tulosta metodista palautuva oliolista sellaisenaan. Tulosteen tulisi näyttää seuraavanlaiselta toisen ajokerran jälkeen.</p>
+<p><strong>Tarkistin ajaa “test_model_note.py” tiedoston toiseen kertaan:</strong></p>
+<pre><code>Error while inserting note.
+Error while inserting note.
+[Note(id=1, title='first_note', content='hello\nworld'), Note(id=2, title='second_note', content='This\nis\nmy\nsecond\nnote.')]</code></pre>
+<p>Jätä tämän tason osalta tietokannan käpistely tähän. Pohdi kuitenkin muitakin mahdollisia muistion ja tietokannan välisiä toiminnallisuuksia, kuten muistion päivitys ja poisto.</p>
+<h2 id="vaihe-5---luettele-muistiot">Vaihe 5 - Luettele muistiot</h2>
+<p>Jatka tasolla 1 luodun “<code>MenuNote</code>”-valikon kehittämistä. Aloita tuomalla “<code>Note</code>”-tietoluokka “<code>model_note.py</code>” tiedostosta ja määrittele sen avulla seuraava tilapäinen testimuuttuja <code>NOTES</code> päätasolle:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb9-1"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">### TEMPORARY START</span></span>
+<span id="cb9-2"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> model_note <span class="im">import</span> Note</span>
+<span id="cb9-3"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb9-3" aria-hidden="true" tabindex="-1"></a>NOTES <span class="op">=</span> [</span>
+<span id="cb9-4"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb9-4" aria-hidden="true" tabindex="-1"></a>    Note(<span class="dv">1</span>, <span class="st">"example"</span>, <span class="st">"Hello</span><span class="ch">\n</span><span class="st">world"</span>),</span>
+<span id="cb9-5"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb9-5" aria-hidden="true" tabindex="-1"></a>    Note(<span class="dv">2</span>, <span class="st">"tomorrow"</span>, <span class="st">"eat</span><span class="ch">\n</span><span class="st">play</span><span class="ch">\n</span><span class="st">sleep"</span>)</span>
+<span id="cb9-6"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb9-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb9-7"><a href="https://moodle.lut.fi/pluginfile.php/2909256/mod_resource/content/0/osa1_taso2.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">### TEMPORARY </span><span class="re">END</span></span></code></pre></div>
+<p>Muokkaa muistiovalikon “<strong><code>List notes</code></strong>” metodia niin, että se listaa muistioista ainoastaan otsikot. Mikäli listassa ei olisi yhtäkään muistiota, tulee ohjelman tulostaa “<code>There are no notes to display.</code>”. Muistiolistan tarkastuksessa voi käyttää listan pituutta. Listan pituuden saa selville “<code>len()</code>”-funktiolla.</p>
+<p>Jos muistioita on olemassa, alusta apulista “<code class="sourceCode python">rows: <span class="bu">list</span>[<span class="bu">str</span>] <span class="op">=</span> []</code>” tulevia merkkijonoja varten. Käy muistiolista alkio kerrallaan läpi ja lisää alkiossa olevat muistiot apulistaan merkkijonoina(riveinä) muistio kerrallaan muodossa: “<code class="sourceCode tcl"><span class="kw">{</span>note.<span class="ot">id</span><span class="kw">}</span> - <span class="kw">{</span>note.<span class="ot">title</span><span class="kw">}</span></code>”.</p>
+<p>Muodosta apulistan merkkijonoista yksi merkkijono. Kätevimmin yhdistely tapahtuu merkkijonon jäsenfunktiolla “<code>join</code>”. Esim. “<code class="sourceCode python"><span class="co">'</span><span class="ch">\n</span><span class="co">'</span>.join(rows)</code>” palauttaa yhden merkkijonon, jossa rivit on yhdistetty rivinvaihtomerkillä. Muista ottaa paluuarvo muuttujaan talteen. Hyvä muuttujanimi voisi olla esim. “<code>content</code>”.</p>
+<p>Seuraavaksi luo yksi “<code>KirjeDetails</code>” olio, johon asetat sisällöksi aiemmin määritellyn pitkän merkkijonon, otsakkeisiin avaimet “<code>title</code>” arvolla “<code> notes </code>” (huomioi välilyönnit ympärille) ja “<code>ID</code>” arvolla “<code>Title</code>”. <code>kirje</code> kirjaston parametreistä löytyy myös “<code>header_separation</code>”, jolla voi määrittää otsakkeen avaimen ja arvon välille erilaisen merkin. Esim. oletus “<code>:&nbsp;</code>” ei kelpaa, vaan harjoitustyössä listauksen yhteydessä vaaditaan tavuviivaa “<code> -&nbsp;</code>” ja välilyönnit ympärille.</p>
+<p>Esitä muistiolista luomalla ensin “<code>Kirje</code>” olio aiemman olion avulla ja käytä muodostetun “<code>Kirje</code>” olion metodia “<code>display</code>”, johon määrität listan esitykseen vaaditun tyylin. Muista tyhjentää apulista ennen kuin poistut metodista (muistinhallinta).</p>
+<p><strong>Vaiheina:</strong></p>
+<ol type="1">
+<li>Jos muistiot listassa on 1 tai enemmän alkiota.
+<ol type="1">
+<li>Alusta apulista rivejä varten</li>
+<li>Käy läpi muistio kerrallaan
+<ol type="1">
+<li>Lisää apulistaan muistion riveinä(merkkijonoina): “<code class="sourceCode tcl"><span class="kw">{</span>note.<span class="ot">id</span><span class="kw">}</span> - <span class="kw">{</span>note.<span class="ot">title</span><span class="kw">}</span></code>”</li>
+</ol></li>
+<li>Yhdistä rivit yhdeksi merkkijonoksi. “<code class="sourceCode python"><span class="co">'</span><span class="ch">\n</span><span class="co">'</span>.join(rows)</code>” palauttaa merkkijonon. Tallenna palautusarvo muuttujaan.</li>
+<li>Luo “<code>KirjeDetails</code>” olio
+<ol type="1">
+<li>Alusta
+<ol type="1">
+<li>Sisällöksi rivit merkkijono muotoisena</li>
+<li>Aseta “<code>header_separation</code>” olemaan “<code> - </code>”</li>
+<li>Aseta otsakkeet
+<ol type="1">
+<li>‘<code>ID</code>’: “<code>Title</code>”</li>
+<li>‘<code>title</code>’: “<code> notes </code>”</li>
+</ol></li>
+</ol></li>
+</ol></li>
+<li>Luo “<code>Kirje</code>” olio hyödyntäen aiempaa “<code>KirjeDetails</code>” oliota. Määritä muuttujan nimeksi vaikka “<code>memo_list</code>”.</li>
+<li>Näytä “<code>memo_list</code>” käyttämällä sen esittely metodia ja määritä tyyliksi “<code>default</code>”.</li>
+<li>Tyhjennä apulistan sisältö (muistinhallinta)</li>
+</ol></li>
+<li>Muutoin (muistiot listassa on 0 alkiota)
+<ol type="1">
+<li>Tulosta käyttäjälle viesti “<code>There are no notes to display.</code>”</li>
+</ol></li>
+<li>Palauta <code>None</code> lopuksi</li>
+</ol>
+<p><strong>Käyttäjän syötteet:</strong></p>
+<pre><code>1
+0</code></pre>
+<p><strong>Ohjelma-ajo:</strong></p>
+<div class="pr">
+<pre class="std"><code class="stdio"><span style="color:#ccc">Program starting.
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">1</span><span style="color:#ccc">
++----- notes -----+
+| ID - Title      |
++-----------------+
+| 1 - example     |
+| 2 - tomorrow    |
++-----------------+
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">0</span><span style="color:#ccc">
+
+Program ending.</span></code>
+</pre>
+</div>
+
+<h2 id="vaihe-6---listaa-yksittäisen-muistion-sisältö">Vaihe 6 - Listaa yksittäisen muistion sisältö</h2>
+<p>Jatka muistiovalikon muokkausta. Muokkaa “<strong><code>View note</code></strong>” toiminnallisuutta niin, että se tulostaa käyttäjän valitseman muistion. Muistion valinta tässä ohjelmassa tapahtuu etsimällä otsikon perusteella. Kysy käyttäjältä muistion otsikko seuraavasti: “<code>Search note by title:</code>”.</p>
+<p>Testaa, että löydätkö otsikon “<code>NOTES</code>” listasta. Tässä kohtaa on suositeltavaa määrittää apumuuttuja, jota käytetään <a href="https://saja.kapsi.fi/var_roles/stud_vers/stud_Python_fin.html#yksisuuntainen">yksisuuntaisen lippu</a> roolin tavoin. Vaiheittainen ohjelmallinen haku menisi seuraavasti:</p>
+<ol type="1">
+<li>Pyydä käyttäjältä syöte kehotteella <code>Seach note by title:&nbsp;</code></li>
+<li>Alusta muuttuja(yksisuuntainen lippu) esim. “<code class="sourceCode python">foundNote: <span class="bu">bool</span></code>” arvo epätodeksi.</li>
+<li>Käy “<code>NOTES</code>” listaa muistio kerrallaan läpi
+<ol type="1">
+<li>Jos muistion otsikko on sama kuin käyttäjän syöttämä
+<ol type="1">
+<li>Aseta “<code>foundNote</code>” muuttujan arvo todeksi</li>
+<li>Luo “<code>KirjeDetails</code>” luokasta olio muistion tiedoilla. Nimeä olio vaikkapa “<code>memo_details</code>”.</li>
+<li>Käytä “<code>memo_details</code>” oliota ja muodosta toinen olio “<code>Kirje</code>” luokan avulla. Esim. “<code>current_memo</code>”.</li>
+<li>Näytä kirje olion sisältö oletusteemalla.</li>
+<li>Poistu toistorakenteesta “<code class="sourceCode python"><span class="cf">break</span></code>” komennolla</li>
+</ol></li>
+<li>Muutoin (muistion otsikko ei ole sama kuin käyttäjän syöttämä)
+<ol type="1">
+<li>ei tarvetta toimenpiteille, jatketaan toistorakenteessa</li>
+</ol></li>
+</ol></li>
+<li>Jos muistiota ei ole löytynyt
+<ol type="1">
+<li>Ilmoita käyttäjälle, ettei muistiota löytynyt “<code>Not found.</code>”</li>
+</ol></li>
+<li>Palauta lopuksi “<code class="sourceCode python"><span class="va">None</span></code>”</li>
+</ol>
+<p><strong>Käyttäjän syötteet:</strong></p>
+<pre><code>2
+yesterday
+2
+tomorrow
+0</code></pre>
+<p><strong>Ohjelma-ajo:</strong></p>
+<div class="pr">
+<pre class="std"><code class="stdio"><span style="color:#ccc">Program starting.
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">2</span><span style="color:#ccc">
+Search note by title: </span><span style="color:#0e0">yesterday</span><span style="color:#ccc">
+Not found.
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">2</span><span style="color:#ccc">
+Search note by title: </span><span style="color:#0e0">tomorrow</span><span style="color:#ccc">
++-----tomorrow-----+
+| ID - 2           |
++------------------+
+| eat              |
+| play             |
+| sleep            |
++------------------+
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">0</span><span style="color:#ccc">
+
+Program ending.</span></code>
+</pre>
+</div>
+
+<h2 id="vaihe-7---lisää-muistio">Vaihe 7 - Lisää muistio</h2>
+<p>Muokkaa luokan “<code>NoteDAO</code>” metodia “<code>Add note</code>”.</p>
+<p><strong>Metodin toimintaperiaate kuvattuna:</strong></p>
+<ol type="1">
+<li>Kysy käyttäjältä muistion otsikko kehotteella “<code>Insert title:&nbsp;</code>”.</li>
+<li>Kysy käyttäjältä syötettävien rivien määrä “<code>Insert the amount of rows:&nbsp;</code>”. (Muista kääntää kokonaisluvuksi ennen vaihetta neljä).</li>
+<li>Alusta “<code class="sourceCode python">rows: <span class="bu">list</span>[<span class="bu">str</span>] <span class="op">=</span> []</code>” apulista</li>
+<li>Toista seuraavaa kysymystä niin monta kertaa kuin käyttäjä määritteli rivejä syötettäväksi.
+<ol type="1">
+<li>Kysy käyttäjältä rivin sisältö kehotteella(Järjestysnumero = Iteraatio + 1):
+<ol type="1">
+<li>“<code>Insert row {i + 1}:&nbsp;</code>”</li>
+</ol></li>
+<li>Lisää käyttäjän syöttämän rivin sisältö rivit apulistaan</li>
+</ol></li>
+<li>Muunna rivit yhdeksi merkkijonoksi, rivit rivinvaihtomerkein eroteltuina.</li>
+<li>Luo “<code>Note</code>”-tietoluokasta olio nimellä “<code>memo</code>” ja syötä sille alustusvaiheessa id: “<code class="sourceCode python"><span class="bu">len</span>(NOTES) <span class="op">+</span> <span class="dv">1</span></code>”, otsikko, sekä sisältö, eli merkkijono, jossa rivit eroteltu rivinvaihtomerkeillä.</li>
+<li>Lisää “<code>memo</code>” päätasolla olevaan “<code>NOTES</code>” listaan.</li>
+<li>Tyhjennä apulista (muistinhallinta)</li>
+<li>Totea käyttäjälle, että muistio on tallennettu “<code>Note stored!</code>”</li>
+<li>Palauta tyhjä arvo</li>
+</ol>
+<p><strong>Käyttäjän syötteet:</strong></p>
+<pre><code>3
+testi
+2
+eka
+toka
+1
+2
+testi
+0</code></pre>
+<p><strong>Ohjelma-ajo:</strong></p>
+<div class="pr">
+<pre class="std"><code class="stdio"><span style="color:#ccc">Program starting.
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">3</span><span style="color:#ccc">
+Insert title: </span><span style="color:#0e0">testi</span><span style="color:#ccc">
+Insert the amount of rows: </span><span style="color:#0e0">2</span><span style="color:#ccc">
+Insert row 1: </span><span style="color:#0e0">eka</span><span style="color:#ccc">
+Insert row 2: </span><span style="color:#0e0">toka</span><span style="color:#ccc">
+Note stored!
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">1</span><span style="color:#ccc">
++----- notes -----+
+| ID - Title      |
++-----------------+
+| 1 - example     |
+| 2 - tomorrow    |
+| 3 - testi       |
++-----------------+
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">2</span><span style="color:#ccc">
+Search note by title: </span><span style="color:#0e0">testi</span><span style="color:#ccc">
++-----testi-----+
+| ID - 3        |
++---------------+
+| eka           |
+| toka          |
++---------------+
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">0</span><span style="color:#ccc">
+
+Program ending.</span></code>
+</pre>
+</div>
+
+<h2 id="vaihe-8---poista-muistio">Vaihe 8 - Poista muistio</h2>
+<p>Toimintaperiaate on hyvin samankaltainen “<strong><code>View note</code></strong>” metodin kanssa.</p>
+<p>Toimintaperiaate kuvailtuna:</p>
+<ol type="1">
+<li>Kysy käyttäjältä poistettavan muistion otsikko “<code>Delete note (insert title):&nbsp;</code>”</li>
+<li>Alusta muuttuja, jota käytät yksisuuntaisen lipun tavoin tarkkailemaan onko muistiota löytynyt.</li>
+<li>Käy “<code>NOTES</code>” listaa alkio kerrallaan läpi. Määritä toistorakenteeseen alkion lisäksi indeksi <code>i</code> tai käy lista läpi pelkkien indeksien varassa
+<ol type="1">
+<li>Jos muistion otsikko on sama kuin käyttäjän syöttämä
+<ol type="1">
+<li>Merkitse yksisuuntainen lippu tosi arvoiseksi</li>
+<li>Poista muistio listasta “<code class="sourceCode python"><span class="kw">del</span> NOTES[i]</code>”</li>
+<li>Tulosta käyttäjälle viesti “<code>Note deleted.</code>”</li>
+<li>Poistu toistorakenteesta “<code class="sourceCode python"><span class="cf">break</span></code>” komennolla</li>
+</ol></li>
+<li>Muutoin =&gt; ei toimenpiteitä</li>
+</ol></li>
+<li>Jos muistiota ei löytynyt
+<ol type="1">
+<li>Tulosta “<code class="sourceCode tcl">'<span class="kw">{</span><span class="ot">title</span><span class="kw">}</span>' not found.</code>”</li>
+</ol></li>
+</ol>
+<p><strong>Käyttäjän syötteet:</strong></p>
+<pre><code>5
+example
+1
+0</code></pre>
+<p><strong>Ohjelma-ajo:</strong></p>
+<div class="pr">
+<pre class="std"><code class="stdio"><span style="color:#ccc">Program starting.
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">5</span><span style="color:#ccc">
+Delete note (insert title): </span><span style="color:#0e0">example</span><span style="color:#ccc">
+Note deleted.
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">1</span><span style="color:#ccc">
++----- notes -----+
+| ID - Title      |
++-----------------+
+| 2 - tomorrow    |
++-----------------+
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">0</span><span style="color:#ccc">
+
+Program ending.</span></code>
+</pre>
+</div>
+
+<h2 id="vaihe-9---muokkaa-muistiota">Vaihe 9 - Muokkaa muistiota</h2>
+<p>Toimintaperiaate on hyvin samankaltainen “<strong><code>View note</code></strong>” ja “<strong><code>Add note</code></strong>” metodien kanssa. Tässä muistiosovelluksessa muokkauksella tarkoitetaan yhden rivin muokkausta kerrallaan.</p>
+<p><strong>Toimintaperiaate:</strong></p>
+<ol type="1">
+<li>Kysy käyttäjältä muistion otsikko.</li>
+<li>Alusta yksisuuntainen lippu muuttuja epätodeksi. Muuttujalla tunnistetaan onko muistio löytynyt.</li>
+<li>Käy läpi muistiot yksi kerrallaan. Ota indeksi mukaan iterointiin.
+<ol type="1">
+<li>Jos muistion otsikko on sama kuin käyttäjän syöttämä
+<ol type="1">
+<li>Muunna yksisuuntainen lippu muuttuja tosi arvoiseksi</li>
+<li>Hae iteraation hetkisestä muistiosta sisältö ja pilko se riveiksi rivinvaihtomerkkien kohdilta. Merkkijonon pilkkominen sen “<code>split</code>”-jäsenfunktiolla tuottaa listan merkkijonoja (<code>rows</code>).</li>
+<li>Kysele käyttäjältä muokattava rivi “<code>Insert row number to edit 1-{len(rows)}, 0 to cancel:&nbsp;</code>”</li>
+<li>Muunna käyttäjän syöte rivinumeroksi ja vähennä siitä 1, jotta indeksiviittaus onnistuu.</li>
+<li>Jos rivi indeksi on -1, käyttäjä perui operaation
+<ol type="1">
+<li>Tulosta “<code>Cancelled.</code>”</li>
+<li>Poistu toistorakenteesta</li>
+</ol></li>
+<li>Kysele käyttäjältä muunnettavan rivin sisältö ja sijoita se suoraan aiemmin määriteltyihin riveihin indeksin perusteella.</li>
+<li>Tee riveistä yksi merkkijono, joita yhdistää “<code>\n</code>”-merkki ja sijoita tulos muistion sisältöön.</li>
+<li>Tyhjennä rivit lista (muistinhallintaa)</li>
+<li>Tulosta viesti käyttäjälle “<code>Edit completed!</code>”</li>
+</ol></li>
+<li>Ei =&gt; ei toimenpiteitä</li>
+</ol></li>
+<li>Jos otsikon mukaista muistiota ei löytynyt
+<ol type="1">
+<li>Tulosta “<code class="sourceCode tcl">'<span class="kw">{</span><span class="ot">title</span><span class="kw">}</span>' not found.</code>”</li>
+</ol></li>
+</ol>
+<p><strong>Käyttäjän syötteet:</strong></p>
+<pre><code>4
+tomorrow
+2
+study
+2
+tomorrow
+0</code></pre>
+<p><strong>Ohjelma-ajo:</strong></p>
+<div class="pr">
+<pre class="std"><code class="stdio"><span style="color:#ccc">Program starting.
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">4</span><span style="color:#ccc">
+Insert note title: </span><span style="color:#0e0">tomorrow</span><span style="color:#ccc">
+Insert row number to edit 1-3, 0 to cancel: </span><span style="color:#0e0">2</span><span style="color:#ccc">
+Insert replacement row: </span><span style="color:#0e0">study</span><span style="color:#ccc">
+Edit completed!
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">2</span><span style="color:#ccc">
+Search note by title: </span><span style="color:#0e0">tomorrow</span><span style="color:#ccc">
++-----tomorrow-----+
+| ID - 2           |
++------------------+
+| eat              |
+| study            |
+| sleep            |
++------------------+
+
+Options:
+1 - List notes
+2 - View note
+3 - Add note
+4 - Edit note
+5 - Delete note
+0 - Exit
+Your choice: </span><span style="color:#0e0">0</span><span style="color:#ccc">
+
+Program ending.</span></code>
+</pre>
+</div>
+
+<h2 id="palautus">Palautus</h2>
+<p>Palauta tämän osuuden tiedostot harjoitustyöosiossa olevaan “<code>P1_L02</code>” tarkistimeen.</p>
+<p>Palautettavat tiedostot:</p>
+<ul>
+<li>“<code>db_conn.py</code>”</li>
+<li>“<code>main.py</code>”</li>
+<li>“<code>menu_note.py</code>”</li>
+<li>“<code>model_note.py</code>”</li>
+<li>“<code>requirements.txt</code>”</li>
+<li>“<code>setup.sql</code>”</li>
+<li>“<code>test_kirje.py</code>”</li>
+<li>“<code>test_model_note.py</code>”</li>
+</ul>
+<p>Tarkistin ajaa tiedostot ja tarkistaa, että sisältö on suurinpiirtein oikein. Kysymällä saa neuvoa.</p>
+
+
+</body></html>

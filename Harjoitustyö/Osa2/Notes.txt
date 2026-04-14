@@ -1,0 +1,14 @@
+# luo virtuaaliympäristö:
+python -m venv .venv
+
+
+# aktivoi virtuaaliympäristö ajamalla tämä konsolissa:
+.venv/Scripts/activate.ps1  
+
+pitäisi näkyä (.venv) tossa komentorivin alussa, merkkinä, että virtuaaliympäristö on valittuna:
+(.venv) PS C:\Users\tommi\SoftwareDevelopment\LAB\lab-oliot-ja-tietokannat-kevat-2026\Harjoitustyö\Osa2>
+
+pip freeze to se version of the installed packages e.g. :
+kirje 0.2.0
+
+pip install kirje
